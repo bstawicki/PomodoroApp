@@ -1,0 +1,70 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Pomodoro</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="card" role="application" aria-label="Simple Pomodoro Timer">
+    <div class="header">
+      <h1>Pomodoro • Focus Timer</h1>
+      <div class="controls">
+        <button id="skip">Skip</button>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+
+    <div class="timer" aria-live="polite">
+      <div class="time" id="time">25:00</div>
+      <div class="session" id="session">Work</div>
+      <div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+    </div>
+
+    <div style="display:flex;gap:8px;margin-top:12px">
+      <button id="start" class="primary">Start</button>
+      <button id="pause">Pause</button>
+      <button id="toggle-sound">🔔</button>
+    </div>
+
+    <div class="settings">
+      <div class="setter">
+        <label>Work (min)</label>
+        <div class="value" id="workVal">25</div>
+        <div class="smallbtn">
+          <button data-role="dec" data-target="work">-</button>
+          <button data-role="inc" data-target="work">+</button>
+        </div>
+      </div>
+      <div class="setter">
+        <label>Short Break (min)</label>
+        <div class="value" id="shortVal">5</div>
+        <div class="smallbtn">
+          <button data-role="dec" data-target="short">-</button>
+          <button data-role="inc" data-target="short">+</button>
+        </div>
+      </div>
+      <div class="setter">
+        <label>Long Break (min)</label>
+        <div class="value" id="longVal">15</div>
+        <div class="smallbtn">
+          <button data-role="dec" data-target="long">-</button>
+          <button data-role="inc" data-target="long">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="muted">Rounds: <span id="rounds">0</span></div>
+      <div class="small muted">Tip: adjust times, then Start</div>
+    </div>
+
+    <audio id="beep" src="beep.wav" preload="auto"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

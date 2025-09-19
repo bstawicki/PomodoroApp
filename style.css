@@ -1,0 +1,155 @@
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --accent: #ff6b6b;
+  --accent-2: #7c5cff;
+  --muted: #9aa4b2;
+  --glass: rgba(255,255,255,0.03);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  background: linear-gradient(180deg, var(--bg), #07101a);
+  color: #e6eef6;
+  padding: 24px;
+}
+
+.card {
+  width: 360px;
+  background: linear-gradient(180deg, var(--card), #071226);
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+button {
+  background: var(--glass);
+  border: 1px solid rgba(255,255,255,0.04);
+  color: inherit;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button.primary {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border: none;
+  color: #07101a;
+  font-weight: 600;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+}
+
+.time {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.session {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.main-controls {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.settings {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  gap: 8px;
+}
+
+.setter {
+  background: rgba(255,255,255,0.02);
+  padding: 10px;
+  border-radius: 10px;
+  flex: 1;
+  text-align: center;
+}
+
+.setter label {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.setter .value {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.setter .smallbtn {
+  margin-top: 8px;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.smallbtn button {
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+.progress {
+  height: 8px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 999px;
+  margin-top: 14px;
+  overflow: hidden;
+}
+
+.progress > i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  width: 0%;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.muted { color: var(--muted); }
+.small { font-size: 12px; }
